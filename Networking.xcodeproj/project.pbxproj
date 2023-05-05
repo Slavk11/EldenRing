@@ -13,6 +13,7 @@
 		7975B1882A0562AB00773888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975B1862A0562AB00773888 /* Main.storyboard */; };
 		7975B18A2A0562AD00773888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7975B1892A0562AD00773888 /* Assets.xcassets */; };
 		7975B18D2A0562AD00773888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975B18B2A0562AD00773888 /* LaunchScreen.storyboard */; };
+		7975B1952A05865B00773888 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975B1942A05865B00773888 /* Anime.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		7975B1892A0562AD00773888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7975B18C2A0562AD00773888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7975B18E2A0562AD00773888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7975B1942A05865B00773888 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				7975B1802A0562AB00773888 /* AppDelegate.swift */,
 				7975B1822A0562AB00773888 /* SceneDelegate.swift */,
 				7975B1842A0562AB00773888 /* MainViewController.swift */,
+				7975B1942A05865B00773888 /* Anime.swift */,
 				7975B1862A0562AB00773888 /* Main.storyboard */,
 				7975B1892A0562AD00773888 /* Assets.xcassets */,
 				7975B18B2A0562AD00773888 /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7975B1952A05865B00773888 /* Anime.swift in Sources */,
 				7975B1852A0562AB00773888 /* MainViewController.swift in Sources */,
 				7975B1812A0562AB00773888 /* AppDelegate.swift in Sources */,
 				7975B1832A0562AB00773888 /* SceneDelegate.swift in Sources */,
