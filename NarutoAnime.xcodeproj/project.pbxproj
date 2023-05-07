@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7975B17D2A0562AB00773888 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7975B17D2A0562AB00773888 /* NarutoAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NarutoAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7975B1802A0562AB00773888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7975B1822A0562AB00773888 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7975B1842A0562AB00773888 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 		7975B17E2A0562AB00773888 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7975B17D2A0562AB00773888 /* Networking.app */,
+				7975B17D2A0562AB00773888 /* NarutoAnime.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,9 +113,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7975B17C2A0562AB00773888 /* Networking */ = {
+		7975B17C2A0562AB00773888 /* NarutoAnime */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "Networking" */;
+			buildConfigurationList = 7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "NarutoAnime" */;
 			buildPhases = (
 				7975B1792A0562AB00773888 /* Sources */,
 				7975B17A2A0562AB00773888 /* Frameworks */,
@@ -125,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = Networking;
+			name = NarutoAnime;
 			productName = Networking;
-			productReference = 7975B17D2A0562AB00773888 /* Networking.app */;
+			productReference = 7975B17D2A0562AB00773888 /* NarutoAnime.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7975B1782A0562AB00773888 /* Build configuration list for PBXProject "Networking" */;
+			buildConfigurationList = 7975B1782A0562AB00773888 /* Build configuration list for PBXProject "NarutoAnime" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7975B17C2A0562AB00773888 /* Networking */,
+				7975B17C2A0562AB00773888 /* NarutoAnime */,
 			);
 		};
 /* End PBXProject section */
@@ -389,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7975B1782A0562AB00773888 /* Build configuration list for PBXProject "Networking" */ = {
+		7975B1782A0562AB00773888 /* Build configuration list for PBXProject "NarutoAnime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7975B18F2A0562AD00773888 /* Debug */,
@@ -398,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "Networking" */ = {
+		7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "NarutoAnime" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7975B1922A0562AD00773888 /* Debug */,
