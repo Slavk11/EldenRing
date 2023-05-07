@@ -85,7 +85,7 @@
 		7975B1742A0562AB00773888 = {
 			isa = PBXGroup;
 			children = (
-				7975B17F2A0562AB00773888 /* Networking */,
+				7975B17F2A0562AB00773888 /* NarutoAnime */,
 				7975B17E2A0562AB00773888 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7975B17F2A0562AB00773888 /* Networking */ = {
+		7975B17F2A0562AB00773888 /* NarutoAnime */ = {
 			isa = PBXGroup;
 			children = (
 				7953FFFA2A06A2BF00A83A72 /* App */,
@@ -107,7 +107,7 @@
 				7953FFFD2A06A31000A83A72 /* Storyboards */,
 				7953FFFE2A06A32C00A83A72 /* Resources */,
 			);
-			path = Networking;
+			path = NarutoAnime;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLZMX2BSJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/App/Info.plist;
+				INFOPLIST_FILE = NarutoAnime/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -364,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLZMX2BSJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Networking/App/Info.plist;
+				INFOPLIST_FILE = NarutoAnime/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
