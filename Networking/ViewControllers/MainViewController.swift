@@ -16,7 +16,7 @@ final class MainViewController: UIViewController {
     }
     
     private func fetchAnime() {
-        private let urlAddress = "https://animechan.vercel.app/api/quotes/anime?title=naruto"
+        let urlAddress = "https://animechan.vercel.app/api/quotes/anime?title=naruto"
         guard let url = URL(string: urlAddress) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
