@@ -12,11 +12,11 @@ final class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fetchAnime()
+        fetchNPC()
     }
     
-    private func fetchAnime() {
-        let urlAddress = "https://animechan.vercel.app/api/quotes/anime?title=naruto"
+    private func fetchNPC() {
+        let urlAddress = "https://eldenring.fanapis.com/api/npcs"
         guard let url = URL(string: urlAddress) else { return }
         
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -27,8 +27,8 @@ final class MainViewController: UIViewController {
             }
             do {
                 let decoder = JSONDecoder()
-                let anime = try decoder.decode([Anime].self, from: data)
-                print(anime)
+                let characterInfo = try decoder.decode(CharacterInfo.self, from: data)
+                print(characterInfo)
             } catch {
                 print(error.localizedDescription)
             }

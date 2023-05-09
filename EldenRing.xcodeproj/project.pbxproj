@@ -13,11 +13,11 @@
 		7975B1882A0562AB00773888 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975B1862A0562AB00773888 /* Main.storyboard */; };
 		7975B18A2A0562AD00773888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7975B1892A0562AD00773888 /* Assets.xcassets */; };
 		7975B18D2A0562AD00773888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975B18B2A0562AD00773888 /* LaunchScreen.storyboard */; };
-		7975B1952A05865B00773888 /* Anime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975B1942A05865B00773888 /* Anime.swift */; };
+		7975B1952A05865B00773888 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975B1942A05865B00773888 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7975B17D2A0562AB00773888 /* NarutoAnime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NarutoAnime.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7975B17D2A0562AB00773888 /* EldenRing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EldenRing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7975B1802A0562AB00773888 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7975B1822A0562AB00773888 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7975B1842A0562AB00773888 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -25,7 +25,7 @@
 		7975B1892A0562AD00773888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7975B18C2A0562AD00773888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7975B18E2A0562AD00773888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7975B1942A05865B00773888 /* Anime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anime.swift; sourceTree = "<group>"; };
+		7975B1942A05865B00773888 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +52,7 @@
 		7953FFFB2A06A2CF00A83A72 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				7975B1942A05865B00773888 /* Anime.swift */,
+				7975B1942A05865B00773888 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,7 +85,7 @@
 		7975B1742A0562AB00773888 = {
 			isa = PBXGroup;
 			children = (
-				7975B17F2A0562AB00773888 /* NarutoAnime */,
+				7975B17F2A0562AB00773888 /* EldenRing */,
 				7975B17E2A0562AB00773888 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -93,12 +93,12 @@
 		7975B17E2A0562AB00773888 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				7975B17D2A0562AB00773888 /* NarutoAnime.app */,
+				7975B17D2A0562AB00773888 /* EldenRing.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		7975B17F2A0562AB00773888 /* NarutoAnime */ = {
+		7975B17F2A0562AB00773888 /* EldenRing */ = {
 			isa = PBXGroup;
 			children = (
 				7953FFFA2A06A2BF00A83A72 /* App */,
@@ -107,15 +107,15 @@
 				7953FFFD2A06A31000A83A72 /* Storyboards */,
 				7953FFFE2A06A32C00A83A72 /* Resources */,
 			);
-			path = NarutoAnime;
+			path = EldenRing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7975B17C2A0562AB00773888 /* NarutoAnime */ = {
+		7975B17C2A0562AB00773888 /* EldenRing */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "NarutoAnime" */;
+			buildConfigurationList = 7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "EldenRing" */;
 			buildPhases = (
 				7975B1792A0562AB00773888 /* Sources */,
 				7975B17A2A0562AB00773888 /* Frameworks */,
@@ -125,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = NarutoAnime;
+			name = EldenRing;
 			productName = Networking;
-			productReference = 7975B17D2A0562AB00773888 /* NarutoAnime.app */;
+			productReference = 7975B17D2A0562AB00773888 /* EldenRing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -145,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 7975B1782A0562AB00773888 /* Build configuration list for PBXProject "NarutoAnime" */;
+			buildConfigurationList = 7975B1782A0562AB00773888 /* Build configuration list for PBXProject "EldenRing" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -158,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7975B17C2A0562AB00773888 /* NarutoAnime */,
+				7975B17C2A0562AB00773888 /* EldenRing */,
 			);
 		};
 /* End PBXProject section */
@@ -181,7 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7975B1952A05865B00773888 /* Anime.swift in Sources */,
+				7975B1952A05865B00773888 /* Character.swift in Sources */,
 				7975B1852A0562AB00773888 /* MainViewController.swift in Sources */,
 				7975B1812A0562AB00773888 /* AppDelegate.swift in Sources */,
 				7975B1832A0562AB00773888 /* SceneDelegate.swift in Sources */,
@@ -333,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLZMX2BSJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NarutoAnime/App/Info.plist;
+				INFOPLIST_FILE = EldenRing/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -364,7 +364,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MLZMX2BSJ3;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NarutoAnime/App/Info.plist;
+				INFOPLIST_FILE = EldenRing/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -389,7 +389,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		7975B1782A0562AB00773888 /* Build configuration list for PBXProject "NarutoAnime" */ = {
+		7975B1782A0562AB00773888 /* Build configuration list for PBXProject "EldenRing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7975B18F2A0562AD00773888 /* Debug */,
@@ -398,7 +398,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "NarutoAnime" */ = {
+		7975B1912A0562AD00773888 /* Build configuration list for PBXNativeTarget "EldenRing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7975B1922A0562AD00773888 /* Debug */,
