@@ -12,16 +12,20 @@ final class CharacterCell: UITableViewCell {
     @IBOutlet var characterNameLabel: UILabel!
     @IBOutlet var characterLocationLabel: UILabel!
     
+    private let networkManager = NetworkManager.shared
+    
     func configure(with character: Character) {
         characterNameLabel.text = character.name
-        characterLocationLabel.text = character.location
+        characterLocationLabel.text = "Location: \(character.location)"
         
-        DispatchQueue.global().async { [weak self] in
-            guard let imageData = try? Data(contentsOf: character.image) else { return }
-            DispatchQueue.main.async {
+        networkManager.fetchImage(from: character.image){ [weak self] result in
+            switch result {
+            case .success(let imageData):
                 self?.characterImage.image = UIImage(data: imageData)
+            case .failure(let error):
+                print(error)
             }
         }
     }
+    
 }
-
