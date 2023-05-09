@@ -7,33 +7,34 @@
 
 import UIKit
 
-final class MainViewController: UIViewController {
+final class MainViewController: UITableViewController {
+    
+    private var characters: [Character] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        fetchNPC()
+        tableView.rowHeight = 100
+        NetworkManager.shared.fetchCharacter { [weak self] values in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.characters = values
+                self.tableView.reloadData()
+            }
+        }
     }
     
-    private func fetchNPC() {
-        let urlAddress = "https://eldenring.fanapis.com/api/npcs"
-        guard let url = URL(string: urlAddress) else { return }
-        
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
-                
-            }
-            do {
-                let decoder = JSONDecoder()
-                let characterInfo = try decoder.decode(CharacterInfo.self, from: data)
-                print(characterInfo)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        characters.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
+        guard let cell = cell as? CharacterCell else { return UITableViewCell() }
+        let character = characters[indexPath.row]
+        cell.configure(with: character)
+        return cell
     }
 }
+
 
 

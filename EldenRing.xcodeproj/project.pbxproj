@@ -14,6 +14,8 @@
 		7975B18A2A0562AD00773888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7975B1892A0562AD00773888 /* Assets.xcassets */; };
 		7975B18D2A0562AD00773888 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7975B18B2A0562AD00773888 /* LaunchScreen.storyboard */; };
 		7975B1952A05865B00773888 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7975B1942A05865B00773888 /* Character.swift */; };
+		798074D62A0A217600A71BC2 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798074D52A0A217600A71BC2 /* CharacterCell.swift */; };
+		79F132EB2A0A4891008E3C46 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F132EA2A0A4891008E3C46 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		7975B18C2A0562AD00773888 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7975B18E2A0562AD00773888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7975B1942A05865B00773888 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		798074D52A0A217600A71BC2 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		79F132EA2A0A4891008E3C46 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				7975B1842A0562AB00773888 /* MainViewController.swift */,
+				798074D72A0A218600A71BC2 /* Views */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,6 +106,7 @@
 		7975B17F2A0562AB00773888 /* EldenRing */ = {
 			isa = PBXGroup;
 			children = (
+				79F132EC2A0A4897008E3C46 /* Services */,
 				7953FFFA2A06A2BF00A83A72 /* App */,
 				7953FFFC2A06A2F900A83A72 /* ViewControllers */,
 				7953FFFB2A06A2CF00A83A72 /* Models */,
@@ -108,6 +114,22 @@
 				7953FFFE2A06A32C00A83A72 /* Resources */,
 			);
 			path = EldenRing;
+			sourceTree = "<group>";
+		};
+		798074D72A0A218600A71BC2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				798074D52A0A217600A71BC2 /* CharacterCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		79F132EC2A0A4897008E3C46 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				79F132EA2A0A4891008E3C46 /* NetworkManager.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79F132EB2A0A4891008E3C46 /* NetworkManager.swift in Sources */,
+				798074D62A0A217600A71BC2 /* CharacterCell.swift in Sources */,
 				7975B1952A05865B00773888 /* Character.swift in Sources */,
 				7975B1852A0562AB00773888 /* MainViewController.swift in Sources */,
 				7975B1812A0562AB00773888 /* AppDelegate.swift in Sources */,

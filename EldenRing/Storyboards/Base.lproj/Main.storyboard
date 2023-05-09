@@ -1,27 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3fI-eO-Uph">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Elden Ring characters-->
+        <scene sceneID="5HI-mj-9Xl">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Networking" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <tableViewController id="wz5-vp-6Uj" customClass="MainViewController" customModule="EldenRing" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="TcH-25-yPD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="characterCell" rowHeight="126" id="qMv-Nm-0pK" userLabel="characterCell" customClass="CharacterCell" customModule="EldenRing" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="320" height="126"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qMv-Nm-0pK" id="9wm-Cd-3Qb">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="126"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aUi-vH-Arc" userLabel="Character Image">
+                                            <rect key="frame" x="0.0" y="0.0" width="155" height="126"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="155" id="fVR-WZ-bBI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tYs-70-qpG">
+                                            <rect key="frame" x="170" y="11" width="134" height="21"/>
+                                            <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="20"/>
+                                            <color key="textColor" red="0.89082228535353536" green="0.71107888620775217" blue="0.006660687938084245" alpha="0.83826572847682124" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHG-ur-tOd">
+                                            <rect key="frame" x="163" y="52" width="147" height="63"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" red="0.84219144570707072" green="0.6722604104469756" blue="0.0062970746199423827" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FHG-ur-tOd" firstAttribute="leading" secondItem="aUi-vH-Arc" secondAttribute="trailing" constant="15" id="ChW-Zx-XpB"/>
+                                        <constraint firstAttribute="trailing" secondItem="FHG-ur-tOd" secondAttribute="trailing" constant="10" id="FhL-v8-azw"/>
+                                        <constraint firstItem="tYs-70-qpG" firstAttribute="top" secondItem="9wm-Cd-3Qb" secondAttribute="top" constant="11" id="FiX-le-z0k"/>
+                                        <constraint firstItem="tYs-70-qpG" firstAttribute="height" secondItem="9wm-Cd-3Qb" secondAttribute="height" multiplier="0.166667" id="OQa-uM-b8k"/>
+                                        <constraint firstItem="tYs-70-qpG" firstAttribute="leading" secondItem="aUi-vH-Arc" secondAttribute="trailing" constant="15" id="Q5V-PX-aa6"/>
+                                        <constraint firstAttribute="bottom" secondItem="aUi-vH-Arc" secondAttribute="bottom" id="aP5-NJ-ERE"/>
+                                        <constraint firstItem="FHG-ur-tOd" firstAttribute="top" secondItem="tYs-70-qpG" secondAttribute="bottom" constant="20" id="kF8-gj-ddk"/>
+                                        <constraint firstItem="aUi-vH-Arc" firstAttribute="leading" secondItem="9wm-Cd-3Qb" secondAttribute="leading" id="xFt-Vo-le2"/>
+                                        <constraint firstItem="aUi-vH-Arc" firstAttribute="top" secondItem="9wm-Cd-3Qb" secondAttribute="top" id="xH1-KP-UDj"/>
+                                        <constraint firstAttribute="trailing" secondItem="tYs-70-qpG" secondAttribute="trailing" constant="16" id="z1O-Se-TLY"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="characterImage" destination="aUi-vH-Arc" id="cfs-mo-mFc"/>
+                                    <outlet property="characterLocationLabel" destination="FHG-ur-tOd" id="dYj-Cn-usk"/>
+                                    <outlet property="characterNameLabel" destination="tYs-70-qpG" id="giQ-BS-g1B"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wz5-vp-6Uj" id="Pof-c5-YGk"/>
+                            <outlet property="delegate" destination="wz5-vp-6Uj" id="hqy-7g-fMr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Elden Ring characters" id="Wfn-xe-5AI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dOc-SA-sdO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138.75" y="-2.112676056338028"/>
+            <point key="canvasLocation" x="1618.125" y="11.619718309859156"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oKO-EQ-0Bn">
+            <objects>
+                <navigationController id="3fI-eO-Uph" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NgR-8e-ipW">
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="wz5-vp-6Uj" kind="relationship" relationship="rootViewController" id="jBh-LL-qXi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gKa-Y2-ubj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="12"/>
         </scene>
     </scenes>
     <resources>
