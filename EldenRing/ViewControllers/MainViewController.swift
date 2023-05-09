@@ -8,9 +8,7 @@
 import UIKit
 
 final class MainViewController: UITableViewController {
-    
     private var characters: [Character] = []
-    private let networkManager = NetworkManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()

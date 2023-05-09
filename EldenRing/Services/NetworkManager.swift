@@ -32,21 +32,22 @@ final class NetworkManager {
     }
     
     func fetchCharacter(completion: @escaping ([Character]) -> Void) {
-        let urlAddress = "https://eldenring.fanapis.com/api/npcs"
-        guard let url = URL(string: urlAddress) else { return }
-        
+       
+        guard let url = URL(string: "https://eldenring.fanapis.com/api/npcs") else { return }
         URLSession.shared.dataTask(with: url) { data, _, error in
             guard let data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            if let character = try? JSONDecoder().decode(CharacterInfo.self, from: data) {
+            do {
+                let decoder = JSONDecoder()
+                let character = try decoder.decode(CharacterInfo.self, from: data)
                 completion(character.data)
-                print(character.data)
-            } else {
-                print("FAIL")
+            } catch {
+                print(error.localizedDescription)
             }
         }.resume()
     }
+    
 }
 
