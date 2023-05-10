@@ -15,5 +15,4 @@ struct Character: Decodable {
 
 struct CharacterInfo: Decodable {
     let data: [Character]
-    
 }

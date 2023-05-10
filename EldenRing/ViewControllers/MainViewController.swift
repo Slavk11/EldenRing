@@ -16,12 +16,12 @@ final class MainViewController: UITableViewController {
         
         fetchCharacter()
     }
-   
+    
+    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         characters.count
     }
     
-    // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath)
         guard let cell = cell as? CharacterCell else { return UITableViewCell() }
@@ -29,7 +29,10 @@ final class MainViewController: UITableViewController {
         cell.configure(with: character)
         return cell
     }
-    
+}
+
+    // MARK: - Networking
+extension MainViewController {
     private func fetchCharacter() {
         NetworkManager.shared.fetchCharacter { [weak self] values in
             guard let self else { return }
@@ -39,9 +42,8 @@ final class MainViewController: UITableViewController {
             }
         }
     }
-    
 }
-
-
+   
+    
 
 

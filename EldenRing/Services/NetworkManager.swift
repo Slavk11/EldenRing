@@ -48,6 +48,5 @@ final class NetworkManager {
             }
         }.resume()
     }
-    
 }
 
