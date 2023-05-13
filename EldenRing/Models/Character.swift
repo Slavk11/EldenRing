@@ -13,8 +13,19 @@ struct Character: Decodable {
     let location: String
     let role: String?
     let quote: String?
+    
+    var description: String {
+            """
+            Name:  \(name)
+            Location:  \(location)
+            Role:  \(role ?? "No Role")
+            Quote: \(quote ?? "No Quote")
+            """
+    }
 }
 
 struct CharacterInfo: Decodable {
     let data: [Character]
 }
+
+

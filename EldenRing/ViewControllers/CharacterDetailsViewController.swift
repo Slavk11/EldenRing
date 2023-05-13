@@ -23,12 +23,7 @@ final class CharacterViewController: UIViewController {
     // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        characterDescriptionLabel.text =  """
-        Name:  \(character.name)
-        Location:  \(character.location)
-        Role:  \(character.role ?? "No Role")
-        Quote: \(character.quote ?? "No Quote")
-        """
+        characterDescriptionLabel.text = character.description
         characterPicture.contentMode = .scaleAspectFill
         characterPicture.layer.cornerRadius = characterPicture.frame.height/2
         
