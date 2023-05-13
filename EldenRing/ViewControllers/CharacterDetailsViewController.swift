@@ -26,11 +26,20 @@ final class CharacterViewController: UIViewController {
         characterDescriptionLabel.text = character.description
         characterPicture.contentMode = .scaleAspectFill
         characterPicture.layer.cornerRadius = characterPicture.frame.height/2
-        
+        showSpinner(in: characterPicture)
         fetchImage()
     }
     
     // MARK: - Private Methods
+    private func showSpinner(in view: UIView) {
+        spinnerView = UIActivityIndicatorView(style: .large)
+        spinnerView.color = .white
+        spinnerView.startAnimating()
+        spinnerView.center = characterPicture.center
+        spinnerView.hidesWhenStopped = true
+        view.addSubview(spinnerView)
+    }
+    
     private func fetchImage() {
         networkManager.fetchImage(from: character.image) { result in
             switch result {
