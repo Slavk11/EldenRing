@@ -10,7 +10,6 @@ import UIKit
 final class CharacterViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var characterDescriptionLabel: UILabel!
-   
     @IBOutlet var characterPicture: UIImageView!
     
     // MARK: - Public properties
