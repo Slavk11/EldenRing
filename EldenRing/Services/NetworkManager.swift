@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 enum NetworkError: Error {
     case invalidURL
@@ -30,22 +31,18 @@ final class NetworkManager {
         }
     }
     
-    func fetchCharacter(completion: @escaping ([Character]) -> Void) {
-       
-        guard let url = URL(string: "https://eldenring.fanapis.com/api/npcs") else { return }
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data else {
-                print(error?.localizedDescription ?? "No error description")
-                return
+    func fetchCourses(from url: URL, completion: @escaping(Result<[Character], AFError>) -> Void) {
+        AF.request("https://eldenring.fanapis.com/api/npcs")
+            .validate()
+            .responseJSON { dataResponse in
+                switch dataResponse.result {
+                case .success(let value):
+                    let characters = Character.getCharacters(from: value)
+                    completion(.success(characters))
+                case .failure(let error):
+                    completion(.failure(error))
+                }
             }
-            do {
-                let decoder = JSONDecoder()
-                let character = try decoder.decode(CharacterInfo.self, from: data)
-                completion(character.data)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }.resume()
     }
+  
 }
-

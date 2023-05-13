@@ -26,7 +26,7 @@ final class CharacterViewController: UIViewController {
         characterPicture.contentMode = .scaleAspectFill
         characterPicture.layer.cornerRadius = characterPicture.frame.height/2
         showSpinner(in: characterPicture)
-        fetchImage()
+        // fetchImage()
     }
     
     // MARK: - Private Methods
@@ -39,7 +39,7 @@ final class CharacterViewController: UIViewController {
         view.addSubview(spinnerView)
     }
     
-    private func fetchImage() {
+   /*private func fetchImage() {
         networkManager.fetchImage(from: character.image) { result in
             switch result {
             case .success(let imageData):
@@ -49,6 +49,6 @@ final class CharacterViewController: UIViewController {
                 print(error)
             }
         }
-    }
+    } */
 }
 

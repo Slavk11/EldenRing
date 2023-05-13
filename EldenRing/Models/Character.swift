@@ -6,13 +6,31 @@
 //
 
 import Foundation
+struct EldenRing: Decodable {
+    let data: [Character]
+}
 
 struct Character: Decodable {
     let name: String
-    let image: URL
+    let image: String
     let location: String
     let role: String?
     let quote: String?
+    
+    init(name: String, image: String, location: String, role: String?, quote: String?) {
+        self.name = name
+        self.image = image
+        self.location = location
+        self.role = role
+        self.quote = quote
+    }
+    init(from characterData: [String: Any]) {
+    name = characterData["name"] as? String ?? ""
+    image = characterData["image"] as? String ?? ""
+    location = characterData["location"] as? String ?? ""
+    role = characterData["role"] as? String ?? "No character role"
+    quote = characterData["quote"] as? String ?? "No character quote"
+    }
     
     var description: String {
             """
@@ -22,10 +40,16 @@ struct Character: Decodable {
             Quote: \(quote ?? "No Quote")
             """
     }
-}
+    
+    static func getCharacters(from value: Any) -> [Character] {
+        guard let charactersData = value as? [String: Any] else { return []}
+        guard let data = charactersData["data"] as? [[String: Any]] else { return [] }
+        return data.map { Character(from: $0) }
+        }
+    }
 
-struct CharacterInfo: Decodable {
-    let data: [Character]
-}
+
+
+
 
 

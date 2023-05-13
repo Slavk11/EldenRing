@@ -9,6 +9,7 @@ import UIKit
 
 final class MainViewController: UITableViewController {
     private var characters: [Character] = []
+    private let networkManager = NetworkManager.shared
     
     // MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -43,16 +44,17 @@ final class MainViewController: UITableViewController {
     // MARK: - Networking
 extension MainViewController {
     private func fetchCharacter() {
-        NetworkManager.shared.fetchCharacter { [weak self] values in
-            guard let self else { return }
-            DispatchQueue.main.async {
-                self.characters = values
-                self.tableView.reloadData()
+        guard let url = URL(string: "https://eldenring.fanapis.com/api/npcs") else { return }
+        networkManager.fetchCourses(from: url) { [weak self] result in
+            switch result {
+                
+            case .success(let characters):
+                self?.characters = characters
+                self?.tableView.reloadData()
+            case .failure(let error):
+                print(error.localizedDescription)
             }
         }
     }
 }
-   
-    
-
 
