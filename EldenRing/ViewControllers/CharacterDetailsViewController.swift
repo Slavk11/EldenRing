@@ -9,7 +9,7 @@ import UIKit
 
 final class CharacterViewController: UIViewController {
     // MARK: - IBOutlets
-    @IBOutlet var characterNameLabel: UILabel!
+    @IBOutlet var characterDescriptionLabel: UILabel!
    
     @IBOutlet var characterPicture: UIImageView!
     
@@ -20,9 +20,10 @@ final class CharacterViewController: UIViewController {
     private let networkManager = NetworkManager.shared
     private var spinnerView = UIActivityIndicatorView()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        characterNameLabel.text =  """
+        characterDescriptionLabel.text =  """
         Name:  \(character.name)
         Location:  \(character.location)
         Role:  \(character.role ?? "No Role")
@@ -30,9 +31,11 @@ final class CharacterViewController: UIViewController {
         """
         characterPicture.contentMode = .scaleAspectFill
         characterPicture.layer.cornerRadius = characterPicture.frame.height/2
+        
         fetchImage()
     }
     
+    // MARK: - Private Methods
     private func fetchImage() {
         networkManager.fetchImage(from: character.image) { result in
             switch result {

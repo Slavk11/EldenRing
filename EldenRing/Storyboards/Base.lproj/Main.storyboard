@@ -141,7 +141,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="nba-A7-KLg"/>
                     <connections>
-                        <outlet property="characterNameLabel" destination="BtM-im-HIX" id="9Qs-MM-muT"/>
+                        <outlet property="characterDescriptionLabel" destination="BtM-im-HIX" id="9Qs-MM-muT"/>
                         <outlet property="characterPicture" destination="EI9-OI-fmk" id="a6q-dD-Ui7"/>
                     </connections>
                 </viewController>
