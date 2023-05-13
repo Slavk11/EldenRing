@@ -28,7 +28,8 @@ final class CharacterViewController: UIViewController {
         Role:  \(character.role ?? "No Role")
         Quote: \(character.quote ?? "No Quote")
         """
-        
+        characterPicture.contentMode = .scaleAspectFill
+        characterPicture.layer.cornerRadius = characterPicture.frame.height/2
         fetchImage()
     }
     

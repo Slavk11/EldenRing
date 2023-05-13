@@ -14,7 +14,10 @@ final class CharacterCell: UITableViewCell {
     
     private let networkManager = NetworkManager.shared
     
+    
     func configure(with character: Character) {
+        characterImage.contentMode = .scaleAspectFill
+        
         characterNameLabel.text = character.name
         characterLocationLabel.text = "Location: \(character.location)"
         
