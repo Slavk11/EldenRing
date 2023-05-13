@@ -11,6 +11,8 @@ struct Character: Decodable {
     let name: String
     let image: URL
     let location: String
+    let role: String?
+    let quote: String?
 }
 
 struct CharacterInfo: Decodable {

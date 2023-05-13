@@ -29,6 +29,14 @@ final class MainViewController: UITableViewController {
         cell.configure(with: character)
         return cell
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            guard let detailVC = segue.destination as? CharacterViewController else { return }
+            detailVC.character = characters[indexPath.row]
+        }
+    }
 }
 
     // MARK: - Networking
