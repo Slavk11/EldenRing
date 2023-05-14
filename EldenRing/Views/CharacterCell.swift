@@ -26,7 +26,6 @@ final class CharacterCell: UITableViewCell {
                 
             case .success(let imageData):
                 self?.characterImage.image = UIImage(data: imageData)
-                print(imageData)
             case .failure(let error):
                 print(error.localizedDescription)
             }
