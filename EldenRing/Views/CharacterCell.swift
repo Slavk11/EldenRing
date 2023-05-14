@@ -23,7 +23,6 @@ final class CharacterCell: UITableViewCell {
         
         networkManager.fetchData(from: character.image) { [weak self] result in
             switch result {
-                
             case .success(let imageData):
                 self?.characterImage.image = UIImage(data: imageData)
             case .failure(let error):
