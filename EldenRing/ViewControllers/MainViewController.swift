@@ -47,7 +47,6 @@ extension MainViewController {
         guard let url = URL(string: "https://eldenring.fanapis.com/api/npcs") else { return }
         networkManager.fetchCourses(from: url) { [weak self] result in
             switch result {
-                
             case .success(let characters):
                 self?.characters = characters
                 self?.tableView.reloadData()
