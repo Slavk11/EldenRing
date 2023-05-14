@@ -6,11 +6,11 @@
 //
 
 import Foundation
-struct EldenRing: Decodable {
+struct EldenRing {
     let data: [Character]
 }
 
-struct Character: Decodable {
+struct Character {
     let name: String
     let image: String
     let location: String
