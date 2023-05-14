@@ -34,7 +34,6 @@ struct Character: Decodable {
     
     var description: String {
             """
-            Name:  \(name)
             Location:  \(location)
             Role:  \(role ?? "No Role")
             Quote: \(quote ?? "No Quote")
@@ -42,9 +41,9 @@ struct Character: Decodable {
     }
     
     static func getCharacters(from value: Any) -> [Character] {
-        guard let charactersData = value as? [String: Any] else { return []}
-        guard let data = charactersData["data"] as? [[String: Any]] else { return [] }
-        return data.map { Character(from: $0) }
+        guard let data = value as? [String: Any] else { return []}
+        guard let charactersData = data["data"] as? [[String: Any]] else { return [] }
+        return charactersData.map { Character(from: $0) }
         }
     }
 
