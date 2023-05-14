@@ -11,6 +11,7 @@ final class CharacterViewController: UIViewController {
     // MARK: - IBOutlets
     @IBOutlet var characterDescriptionLabel: UILabel!
     @IBOutlet var characterPicture: UIImageView!
+    @IBOutlet var characterNameLabel: UILabel!
     
     // MARK: - Public properties
     var character: Character!
@@ -23,10 +24,11 @@ final class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         characterDescriptionLabel.text = character.description
+        characterNameLabel.text = character.name
         characterPicture.contentMode = .scaleAspectFill
         characterPicture.layer.cornerRadius = characterPicture.frame.height/2
         showSpinner(in: characterPicture)
-        // fetchImage()
+        fetchImage()
     }
     
     // MARK: - Private Methods
@@ -39,16 +41,17 @@ final class CharacterViewController: UIViewController {
         view.addSubview(spinnerView)
     }
     
-   /*private func fetchImage() {
-        networkManager.fetchImage(from: character.image) { result in
+    private func fetchImage() {
+        networkManager.fetchData(from: character.image) { [weak self] result in
             switch result {
             case .success(let imageData):
-                self.characterPicture.image = UIImage(data: imageData)
-                self.spinnerView.stopAnimating()
+                self?.characterPicture.image = UIImage(data: imageData)
+                self?.spinnerView.stopAnimating()
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
-    } */
+    }
+    
 }
 
