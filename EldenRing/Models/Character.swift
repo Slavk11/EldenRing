@@ -25,27 +25,27 @@ struct Character: Decodable {
         self.quote = quote
     }
     init(from characterData: [String: Any]) {
-    name = characterData["name"] as? String ?? ""
-    image = characterData["image"] as? String ?? ""
-    location = characterData["location"] as? String ?? ""
-    role = characterData["role"] as? String ?? "No character role"
-    quote = characterData["quote"] as? String ?? "No character quote"
+        name = characterData["name"] as? String ?? ""
+        image = characterData["image"] as? String ?? ""
+        location = characterData["location"] as? String ?? ""
+        role = characterData["role"] as? String ?? "No character role"
+        quote = characterData["quote"] as? String ?? "No character quote"
     }
     
     var description: String {
-            """
-            Location:  \(location)
-            Role:  \(role ?? "No Role")
-            Quote: \(quote ?? "No Quote")
-            """
+        """
+        Location: \(location)
+        Role: \(role ?? "No Role")
+        Quote: \(quote ?? "No Quote")
+        """
     }
     
     static func getCharacters(from value: Any) -> [Character] {
         guard let data = value as? [String: Any] else { return []}
         guard let charactersData = data["data"] as? [[String: Any]] else { return [] }
         return charactersData.map { Character(from: $0) }
-        }
     }
+}
 
 
 
