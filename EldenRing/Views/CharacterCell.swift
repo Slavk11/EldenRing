@@ -21,8 +21,17 @@ final class CharacterCell: UITableViewCell {
         characterNameLabel.text = character.name
         characterLocationLabel.text = "Location: \(character.location)"
         
-       
+        networkManager.fetchData(from: character.image) { [weak self] result in
+            switch result {
+                
+            case .success(let imageData):
+                self?.characterImage.image = UIImage(data: imageData)
+                print(imageData)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
-    
+}
+
 
